@@ -1,13 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ludus Manus_Ecomerce de artículos coleccionables</title>
+  <meta charset="UTF-8">
+  <title>Tienda de Cartas Pokémon</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<h1>Ludus Magnus</h1>
-<h2>Tienda de artículos coleccionables</h2>
 <body>
-    <script src="./entrega.js"></script>
+  <h1>Bienvenido a Ludus Magnus - Tienda Pokémon</h1>
+
+  <!-- Bienvenida -->
+  <section id="bienvenida">
+    <p>¿Es tu primera vez aquí?</p>
+    <button id="btnSiPrimeraVez">Sí</button>
+    <button id="btnNoPrimeraVez">No</button>
+    <div id="respuestaBienvenida"></div>
+  </section>
+
+  <!-- Selector de cartas -->
+  <section id="tienda" style="display:none;">
+    <h2>Catálogo de Cartas</h2>
+    <form id="formCartas">
+      <select id="seleccionCarta" required>
+        <option value="">Selecciona una carta</option>
+        <option value="1">Pikachu - S/30</option>
+        <option value="2">Charizard - S/55</option>
+      </select>
+      <button type="submit">Agregar al carrito</button>
+    </form>
+    <div id="mensajeOferta"></div>
+  </section>
+
+  <!-- Carrito -->
+  <section id="carritoSection" style="display:none;">
+    <h2>Carrito de Compras</h2>
+    <ul id="carritoLista"></ul>
+    <button id="btnFinalizarCompra">Finalizar compra</button>
+    <p id="resumenCompra"></p>
+  </section>
+
+  <button id="btnVaciarCarrito">Vaciar carrito</button>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
